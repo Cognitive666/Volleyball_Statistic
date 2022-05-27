@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class PodachaActivity extends AppCompatActivity {
     public SharedPreferences pref;
@@ -92,8 +93,12 @@ public class PodachaActivity extends AppCompatActivity {
                 check_pr(edit,p11_name,pr_names,pr_udnd,"Player11/U_pr","Player11/N_pr","Player11/All_pr");
                 check(edit,p12_name,p_names,p_udnd,"Player12/U_p","Player12/N_p","Player12/All_p"  );
                 check_pr(edit,p12_name,pr_names,pr_udnd,"Player12/U_pr","Player12/N_pr","Player12/All_pr");
+                Toast toast = Toast.makeText(getApplicationContext(),
+                        "Статистика игрока успешно записана!", Toast.LENGTH_SHORT);
+                toast.show();
                 Intent intent = new Intent(PodachaActivity.this,Game.class);
                 startActivity(intent);
+
             }
         });
     }

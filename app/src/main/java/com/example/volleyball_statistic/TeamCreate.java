@@ -93,26 +93,32 @@ public class TeamCreate extends AppCompatActivity {
                 if(name_buffer ==sp_tm1.getSelectedItem()){
                     edit.putInt("Player"+i+"/teams_num",teams_num);
                     edit.putInt("Player"+i+"/num_in_team",1);
+                    edit.apply();
                 }
                 if(name_buffer ==sp_tm2.getSelectedItem()){
                     edit.putInt("Player"+i+"/teams_num",teams_num);
                     edit.putInt("Player"+i+"/num_in_team",2);
+                    edit.apply();
                 }
                 if(name_buffer ==sp_tm3.getSelectedItem()){
                     edit.putInt("Player"+i+"/teams_num",teams_num);
                     edit.putInt("Player"+i+"/num_in_team",3);
+                    edit.apply();
                 }
                 if(name_buffer ==sp_tm4.getSelectedItem()){
                     edit.putInt("Player"+i+"/teams_num",teams_num);
                     edit.putInt("Player"+i+"/num_in_team",4);
+                    edit.apply();
                 }
                 if(name_buffer ==sp_tm5.getSelectedItem()){
                     edit.putInt("Player"+i+"/teams_num",teams_num);
                     edit.putInt("Player"+i+"/num_in_team",5);
+                    edit.apply();
                 }
                 if(name_buffer ==sp_tm6.getSelectedItem()){
                     edit.putInt("Player"+i+"/teams_num",teams_num);
                     edit.putInt("Player"+i+"/num_in_team",6);
+                    edit.apply();
                 }
             }
                 Toast toast = Toast.makeText(getApplicationContext(),

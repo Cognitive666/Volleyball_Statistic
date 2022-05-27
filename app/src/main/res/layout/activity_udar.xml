@@ -14,7 +14,8 @@
         android:layout_marginEnd="80dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/p_names" />
+        app:layout_constraintTop_toBottomOf="@+id/p_names"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Spinner
         android:id="@+id/p_udnd_spn"
@@ -25,7 +26,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/p_udnd" />
+        app:layout_constraintTop_toBottomOf="@+id/p_udnd"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Spinner
         android:id="@+id/pr_udnd_spn"
@@ -36,7 +38,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pr_udnd" />
+        app:layout_constraintTop_toBottomOf="@+id/pr_udnd"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Spinner
         android:id="@+id/pr_names_spn"
@@ -106,6 +109,7 @@
         android:layout_marginTop="131dp"
         android:layout_marginEnd="132dp"
         android:text="Записать"
+        android:backgroundTint="#1642C8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pr_udnd_spn" />

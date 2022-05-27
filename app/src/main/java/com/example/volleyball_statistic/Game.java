@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class Game extends AppCompatActivity {
@@ -134,15 +135,50 @@ public class Game extends AppCompatActivity {
         team_spinner1.setAdapter(team_adapter);
         team_spinner2.setAdapter(team_adapter);
 
-
+        pos_arranger(sp_1_tm1,"sp_1_tm1");
+        pos_arranger(sp_2_tm1,"sp_2_tm1");
+        pos_arranger(sp_3_tm1,"sp_3_tm1");
+        pos_arranger(sp_4_tm1,"sp_4_tm1");
+        pos_arranger(sp_5_tm1,"sp_5_tm1");
+        pos_arranger(sp_6_tm1,"sp_6_tm1");
+        pos_arranger(sp_1_tm2,"sp_1_tm2");
+        pos_arranger(sp_2_tm2,"sp_2_tm2");
+        pos_arranger(sp_3_tm2,"sp_3_tm2");
+        pos_arranger(sp_4_tm2,"sp_4_tm2");
+        pos_arranger(sp_5_tm2,"sp_5_tm2");
+        pos_arranger(sp_6_tm2,"sp_6_tm2");
 
 
         clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                edit.putInt("sp_1_tm1",0);
+                edit.putInt("sp_2_tm1",0);
+                edit.putInt("sp_3_tm1",0);
+                edit.putInt("sp_4_tm1",0);
+                edit.putInt("sp_5_tm1",0);
+                edit.putInt("sp_6_tm1",0);
+                edit.putInt("sp_1_tm2",0);
+                edit.putInt("sp_2_tm2",0);
+                edit.putInt("sp_3_tm2",0);
+                edit.putInt("sp_4_tm2",0);
+                edit.putInt("sp_5_tm2",0);
+                edit.putInt("sp_6_tm2",0);
                 edit.putInt("Score1",0);
                 edit.putInt("Score2",0);
                 edit.apply();
+                pos_arranger(sp_1_tm1,"sp_1_tm1");
+                pos_arranger(sp_2_tm1,"sp_2_tm1");
+                pos_arranger(sp_3_tm1,"sp_3_tm1");
+                pos_arranger(sp_4_tm1,"sp_4_tm1");
+                pos_arranger(sp_5_tm1,"sp_5_tm1");
+                pos_arranger(sp_6_tm1,"sp_6_tm1");
+                pos_arranger(sp_1_tm2,"sp_1_tm2");
+                pos_arranger(sp_2_tm2,"sp_2_tm2");
+                pos_arranger(sp_3_tm2,"sp_3_tm2");
+                pos_arranger(sp_4_tm2,"sp_4_tm2");
+                pos_arranger(sp_5_tm2,"sp_5_tm2");
+                pos_arranger(sp_6_tm2,"sp_6_tm2");
                 score1 = pref.getInt("Score1",0);
                 score2 = pref.getInt("Score2",0);
                 score_panel1.setText("0");
@@ -160,6 +196,19 @@ public class Game extends AppCompatActivity {
                 score_panel1.setText(score1_str);
                 edit.putInt("Score1",score1);
                 edit.apply();
+                pos_checker(sp_1_tm1,"sp_1_tm1",edit);
+                pos_checker(sp_2_tm1,"sp_2_tm1",edit);
+                pos_checker(sp_3_tm1,"sp_3_tm1",edit);
+                pos_checker(sp_4_tm1,"sp_4_tm1",edit);
+                pos_checker(sp_5_tm1,"sp_5_tm1",edit);
+                pos_checker(sp_6_tm1,"sp_6_tm1",edit);
+                pos_checker(sp_1_tm2,"sp_1_tm2",edit);
+                pos_checker(sp_2_tm2,"sp_2_tm2",edit);
+                pos_checker(sp_3_tm2,"sp_3_tm2",edit);
+                pos_checker(sp_4_tm2,"sp_4_tm2",edit);
+                pos_checker(sp_5_tm2,"sp_5_tm2",edit);
+                pos_checker(sp_6_tm2,"sp_6_tm2",edit);
+
                 Intent intent = new Intent(Game.this,GameMenu.class);
                 startActivity(intent);
 
@@ -195,7 +244,20 @@ public class Game extends AppCompatActivity {
 
                 score_panel2.setText(score2_str);
                 edit.putInt("Score2",score2);
+                pos_checker(sp_1_tm1,"sp_1_tm1",edit);
+                pos_checker(sp_2_tm1,"sp_2_tm1",edit);
+                pos_checker(sp_3_tm1,"sp_3_tm1",edit);
+                pos_checker(sp_4_tm1,"sp_4_tm1",edit);
+                pos_checker(sp_5_tm1,"sp_5_tm1",edit);
+                pos_checker(sp_6_tm1,"sp_6_tm1",edit);
+                pos_checker(sp_1_tm2,"sp_1_tm2",edit);
+                pos_checker(sp_2_tm2,"sp_2_tm2",edit);
+                pos_checker(sp_3_tm2,"sp_3_tm2",edit);
+                pos_checker(sp_4_tm2,"sp_4_tm2",edit);
+                pos_checker(sp_5_tm2,"sp_5_tm2",edit);
+                pos_checker(sp_6_tm2,"sp_6_tm2",edit);
                 edit.apply();
+
                 Intent intent = new Intent(Game.this,GameMenu.class);
                 startActivity(intent);
             }
@@ -224,6 +286,22 @@ public class Game extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Game.this, Menu.class);
+                edit.putInt("sp_1_tm1",0);
+                edit.putInt("sp_2_tm1",0);
+                edit.putInt("sp_3_tm1",0);
+                edit.putInt("sp_4_tm1",0);
+                edit.putInt("sp_5_tm1",0);
+                edit.putInt("sp_6_tm1",0);
+                edit.putInt("sp_1_tm2",0);
+                edit.putInt("sp_2_tm2",0);
+                edit.putInt("sp_3_tm2",0);
+                edit.putInt("sp_4_tm2",0);
+                edit.putInt("sp_5_tm2",0);
+                edit.putInt("sp_6_tm2",0);
+
+
+
+                edit.apply();
                 startActivity(intent);
             }
         });
@@ -257,7 +335,9 @@ public class Game extends AppCompatActivity {
                 win_checker1(p12_name,p12_rate,p12_rt_svcode,sp_1_tm1,sp_2_tm1,sp_3_tm1,sp_4_tm1,sp_5_tm1,
                         sp_6_tm1,edit);
 
-
+                Toast toast = Toast.makeText(getApplicationContext(),
+                        "Победа команды " + team_spinner1.getSelectedItem().toString(), Toast.LENGTH_SHORT);
+                toast.show();
 
             }
         });
@@ -289,6 +369,9 @@ public class Game extends AppCompatActivity {
                         sp_6_tm2,edit);
                 win_checker2(p12_name,p12_rate,p12_rt_svcode,sp_1_tm2,sp_2_tm2,sp_3_tm2,sp_4_tm2,sp_5_tm2,
                         sp_6_tm2,edit);
+                Toast toast = Toast.makeText(getApplicationContext(),
+                        "Победа команды " + team_spinner2.getSelectedItem().toString(), Toast.LENGTH_SHORT);
+                toast.show();
             }
         });
 
@@ -299,44 +382,57 @@ public class Game extends AppCompatActivity {
             public void onClick(View view) {
                 int teams_number = pref.getInt("TeamsNum",0);
                 for(int i=1;i<teams_number+1; i++){
-                    String buffer = pref.getString("Team" + i +"/name","Null");
+                    String team_buffer = "Team" +i+"/name";
+                    String buffer = pref.getString(team_buffer,"Null");
                     if (buffer.equals(team_spinner1.getSelectedItem().toString())){
                         for(int j = 1;j<13;j++){
-                            int team_num_buffer = pref.getInt("Player" + j +"/teams_num",0);
+                            String player_code_teams_num ="Player" + j +"/teams_num";
+                            int team_num_buffer = pref.getInt(player_code_teams_num,0);
                             if(team_num_buffer == i){
-                                int num_in_team_buffer = pref.getInt("Player" + j + "/num_in_team", 0);
-                                String pos_buffer = pref.getString("Player"+j+"/name","Другой игрок");
+                                String player_code_num_in_team = "Player" + j + "/num_in_team";
+                                int num_in_team_buffer = pref.getInt(player_code_num_in_team, 0);
+                                String player_code_name = "Player"+j+"/name";
+                                String pos_buffer = pref.getString(player_code_name,"Другой игрок");
                                 int position = adapter.getPosition(pos_buffer);
                                 if(num_in_team_buffer == 1){
-                                    sp_1_tm2.setSelection(position);
+                                    sp_1_tm1.setSelection(position);
                                 }
                                 if(num_in_team_buffer == 2){
-                                    sp_2_tm2.setSelection(position);
+                                    sp_2_tm1.setSelection(position);
                                 }
                                 if(num_in_team_buffer == 3){
-                                    sp_3_tm2.setSelection(position);
+                                    sp_3_tm1.setSelection(position);
                                 }
                                 if(num_in_team_buffer == 4){
-                                    sp_4_tm2.setSelection(position);
+                                    sp_4_tm1.setSelection(position);
                                 }
                                 if(num_in_team_buffer == 5){
-                                    sp_5_tm2.setSelection(position);
+                                    sp_5_tm1.setSelection(position);
                                 }
                                 if(num_in_team_buffer == 6){
-                                    sp_6_tm2.setSelection(position);
+                                    sp_6_tm1.setSelection(position);
                                 }
                             }
 
                         }
                     }
 
-                    String buffer2 = pref.getString("Team" + i +"/name","Null");
-                    if (buffer2.equals(team_spinner2.getSelectedItem().toString())){
+
+                }
+
+
+                for(int i=1;i<teams_number+1; i++){
+                    String team_buffer = "Team" +i+"/name";
+                    String buffer = pref.getString(team_buffer,"Null");
+                    if (buffer.equals(team_spinner2.getSelectedItem().toString())){
                         for(int j = 1;j<13;j++){
-                            int team_num_buffer = pref.getInt("Player" + j +"/teams_num",0);
+                            String player_code_teams_num ="Player" + j +"/teams_num";
+                            int team_num_buffer = pref.getInt(player_code_teams_num,0);
                             if(team_num_buffer == i){
-                                int num_in_team_buffer = pref.getInt("Player" + j + "/num_in_team", 0);
-                                String pos_buffer = pref.getString("Player"+j+"/name","Другой игрок");
+                                String player_code_num_in_team = "Player" + j + "/num_in_team";
+                                int num_in_team_buffer = pref.getInt(player_code_num_in_team, 0);
+                                String player_code_name = "Player"+j+"/name";
+                                String pos_buffer = pref.getString(player_code_name,"Другой игрок");
                                 int position = adapter.getPosition(pos_buffer);
                                 if(num_in_team_buffer == 1){
                                     sp_1_tm2.setSelection(position);
@@ -360,7 +456,6 @@ public class Game extends AppCompatActivity {
 
                         }
                     }
-
 
 
                 }
@@ -384,6 +479,19 @@ public class Game extends AppCompatActivity {
          edit.putInt(p_rt_svcode,rate+30);
      }else{edit.putInt(p_rt_svcode,rate-30 );
      }
+     edit.putInt("sp_1_tm1",0);
+     edit.putInt("sp_2_tm1",0);
+     edit.putInt("sp_3_tm1",0);
+     edit.putInt("sp_4_tm1",0);
+     edit.putInt("sp_5_tm1",0);
+     edit.putInt("sp_6_tm1",0);
+     edit.putInt("sp_1_tm2",0);
+     edit.putInt("sp_2_tm2",0);
+     edit.putInt("sp_3_tm2",0);
+     edit.putInt("sp_4_tm2",0);
+     edit.putInt("sp_5_tm2",0);
+     edit.putInt("sp_6_tm2",0);
+
      edit.apply();
 
 
@@ -399,13 +507,46 @@ public class Game extends AppCompatActivity {
             edit.putInt(p_rt_svcode,rate+30);
         }else{edit.putInt(p_rt_svcode,rate-30 );
         }
+        edit.putInt("sp_1_tm1",0);
+        edit.putInt("sp_2_tm1",0);
+        edit.putInt("sp_3_tm1",0);
+        edit.putInt("sp_4_tm1",0);
+        edit.putInt("sp_5_tm1",0);
+        edit.putInt("sp_6_tm1",0);
+        edit.putInt("sp_1_tm2",0);
+        edit.putInt("sp_2_tm2",0);
+        edit.putInt("sp_3_tm2",0);
+        edit.putInt("sp_4_tm2",0);
+        edit.putInt("sp_5_tm2",0);
+        edit.putInt("sp_6_tm2",0);
+
         edit.apply();
 
 
 
     }
 
+    public void pos_checker(Spinner spn,String spn_code,SharedPreferences.Editor edit){
+       for(int i=1; i<13; i++){
+           String num_buffer = Integer.toString(i);
+           String player_code ="Player" + i +"/name";
+           String name_buffer = pref.getString(player_code,"Другой игрок");
 
+           if(name_buffer.equals(spn.getSelectedItem().toString())){
+               int buffer = i -1;
+               edit.putInt(spn_code,buffer);
+               edit.apply();
+
+           }
+       }
+    }
+
+    public void pos_arranger(Spinner spn,String spn_code){
+        int pos_buffer = pref.getInt(spn_code,12);
+        spn.setSelection(pos_buffer);
+
+
+    }
 
 }
 

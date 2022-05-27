@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class UdarActivity extends AppCompatActivity {
 
@@ -93,6 +94,9 @@ public class UdarActivity extends AppCompatActivity {
                 check_pr(edit,p11_name,sv_names,sv_udnd,"Player11/U_sv","Player11/N_sv","Player11/All_sv");
                 check(edit,p12_name,u_names,u_udnd,"Player12/U_u","Player12/N_u","Player12/All_u"  );
                 check_pr(edit,p12_name,sv_names,sv_udnd,"Player12/U_sv","Player12/N_sv","Player12/All_sv");
+                Toast toast = Toast.makeText(getApplicationContext(),
+                        "Статистика игрока записана!", Toast.LENGTH_SHORT);
+                toast.show();
                 Intent intent = new Intent(UdarActivity.this,Game.class);
                 startActivity(intent);
             }

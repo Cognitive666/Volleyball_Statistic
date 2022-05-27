@@ -90,7 +90,34 @@
         android:layout_marginStart="158dp"
         android:layout_marginTop="289dp"
         android:layout_marginEnd="147dp"
-        android:text="Вывести"
+        android:backgroundTint="#1642C8"
+        android:text="Вывести статистику"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/U_pr" />
+
+    <Button
+        android:id="@+id/null_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="97dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="80dp"
+        android:backgroundTint="#1642C8"
+        android:text="Обнуление статистики"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/U_pr" />
+
+    <Button
+        android:id="@+id/exit_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="432dp"
+        android:layout_marginEnd="314dp"
+        android:backgroundTint="#1642C8"
+        android:text="выход"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/U_pr" />

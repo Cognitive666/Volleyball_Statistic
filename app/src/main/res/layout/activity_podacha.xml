@@ -105,6 +105,7 @@
         android:layout_marginStart="132dp"
         android:layout_marginTop="131dp"
         android:layout_marginEnd="132dp"
+        android:backgroundTint="#1642C8"
         android:text="Записать"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
