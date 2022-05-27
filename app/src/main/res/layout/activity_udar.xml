@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PodachaActivity">
+
+    <Spinner
+        android:id="@+id/p_names_spnr"
+        android:layout_width="252dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="79dp"
+        android:layout_marginEnd="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/p_names" />
+
+    <Spinner
+        android:id="@+id/p_udnd_spn"
+        android:layout_width="252dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="79dp"
+        android:layout_marginEnd="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/p_udnd" />
+
+    <Spinner
+        android:id="@+id/pr_udnd_spn"
+        android:layout_width="252dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="79dp"
+        android:layout_marginEnd="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pr_udnd" />
+
+    <Spinner
+        android:id="@+id/pr_names_spn"
+        android:layout_width="252dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="79dp"
+        android:layout_marginEnd="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/names_spnr3"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/p_names"
+        android:layout_width="252dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="79dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="80dp"
+        android:text="Ударяющий:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/p_udnd"
+        android:layout_width="252dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="79dp"
+        android:layout_marginEnd="80dp"
+        android:text="Удар удачный/неудачный:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/p_names_spnr" />
+
+    <TextView
+        android:id="@+id/names_spnr3"
+        android:layout_width="252dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="79dp"
+        android:layout_marginEnd="80dp"
+        android:text="Связующий:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/p_udnd_spn" />
+
+    <TextView
+        android:id="@+id/pr_udnd"
+        android:layout_width="252dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="79dp"
+        android:layout_marginEnd="80dp"
+        android:text="Связка удачная/неудачная:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pr_names_spn" />
+
+    <Button
+        android:id="@+id/save_btn"
+        android:layout_width="147dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="131dp"
+        android:layout_marginEnd="132dp"
+        android:text="Записать"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pr_udnd_spn" />
+</androidx.constraintlayout.widget.ConstraintLayout>

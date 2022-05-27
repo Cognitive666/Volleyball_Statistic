@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "15025178626",
+    "firebase_url": "https://volleyballstatdatabase-default-rtdb.firebaseio.com",
+    "project_id": "volleyballstatdatabase",
+    "storage_bucket": "volleyballstatdatabase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:15025178626:android:5c5dcac1a926dbc37b7f1b",
+        "android_client_info": {
+          "package_name": "com.example.volleyball_statistic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "15025178626-bo4j4cn4ativkr41vf7pbqsen6q0emqd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCn5Buqz8UatBG-DJP7hDMEPZNJ6Kl5yrY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "15025178626-bo4j4cn4ativkr41vf7pbqsen6q0emqd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
